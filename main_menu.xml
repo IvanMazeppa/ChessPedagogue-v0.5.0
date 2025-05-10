@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_save_game"
+        android:title="Save Game"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_load_game"
+        android:title="Load Game"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        app:showAsAction="never" />
+</menu>
