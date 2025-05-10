@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".GameAnalysisActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game Analysis"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:background="#F0F0F0" />
+
+    <!-- Chess Board -->
+    <com.example.chesspedagogue.ChessBoardView
+        android:id="@+id/analysisBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Move Navigation Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/prevMoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:enabled="false"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/moveInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:text="Initial Position" />
+
+        <Button
+            android:id="@+id/nextMoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Analysis Controls -->
+    <Button
+        android:id="@+id/analyzeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Analyze This Position"
+        android:layout_margin="8dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="@android:color/white" />
+
+    <!-- Analysis Results -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="#F8F8F8"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/analysisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:lineSpacingExtra="4sp"
+            android:text="Press 'Analyze This Position' to see Stockfish's evaluation and suggestions." />
+    </ScrollView>
+
+</LinearLayout>
